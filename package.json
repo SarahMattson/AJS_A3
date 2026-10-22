@@ -1,0 +1,28 @@
+{
+  "name": "a3_starter",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/SarahMattson/A3_Javascript#readme",
+  "bugs": {
+    "url": "https://github.com/SarahMattson/A3_Javascript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarahMattson/A3_Javascript.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "chai": "^6.3.0",
+    "mocha": "^12.0.3",
+    "mongodb": "^7.7.0"
+  }
+}
