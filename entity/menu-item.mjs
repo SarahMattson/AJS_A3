@@ -36,6 +36,10 @@ class MenuItem {
     return this.#vegetarian;
   }
 
+  formatItem() {
+    return `${this.id}, ${this.#description}: $${this.price}`;
+  }
+
   toJSON() {
     return {
       id: this.id,

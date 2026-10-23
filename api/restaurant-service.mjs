@@ -20,13 +20,13 @@ async function processRequest(action, content) {
   try {
     switch (action) {
       case "LIST": {
-        let items = await getAllItems();
-        let menuItems = items.map((item) => new MenuItem(item));
+        let item = await getAllItems();
         resp = {
           statusCode: 200,
           err: null,
-          data: menuItems,
+          data: item,
         };
+        break;
       }
       case "ADD": {
         if (!content) {
@@ -43,6 +43,7 @@ async function processRequest(action, content) {
             data: item,
           };
         }
+        break;
       }
       case "UPDATE": {
         if (!content || !content.id) {
@@ -59,6 +60,7 @@ async function processRequest(action, content) {
             data: item,
           };
         }
+        break;
       }
       case "DELETE": {
         if (!content || !content.id) {
@@ -75,6 +77,7 @@ async function processRequest(action, content) {
             data: item,
           };
         }
+        break;
       }
       default: {
         resp = {
@@ -82,12 +85,13 @@ async function processRequest(action, content) {
           err: "Something went wrong.",
           data: null,
         };
+        break;
       }
     }
   } catch (err) {
     resp = {
       statusCode: 500,
-      err: err.message,
+      err: "Catch Error",
       data: null,
     };
   }

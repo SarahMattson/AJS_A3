@@ -87,7 +87,7 @@ async function itemExists(item) {
  */
 async function getItemByID(itemID) {
   try {
-    let cliet = await ConnectionManager.getConnection();
+    let client = await ConnectionManager.getConnection();
     let connection = client
       .db(Constants.DB_NAME)
       .collection(Constants.DB_COLLECTION);

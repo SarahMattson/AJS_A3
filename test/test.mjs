@@ -1,4 +1,5 @@
 /* helper function */
+
 async function defineTestItems() {
   return {
     goodItem: new MenuItem(107, "", "", 0, false),
